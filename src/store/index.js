@@ -11,22 +11,22 @@ export default new Vuex.Store({
     CREATE_IDEAS(state, payload){
       const id = Date.now();
       state.ideas[id] = payload;
-      //state.ideas = {...state.ideas };
+      state.ideas = { ...state.ideas }; 
     }
   },
   actions: { //on dispatch des actions
     createIdea({ commit }, payload){
       console.log("actions / createIdea");
       commit('CREATE_IDEAS', payload);
-    },
-    /*getters: {
-      allIdeas(state) {
-        debugger;
-        const allIdeas = Object.keys(state.ideas).map(key => state.ideas[key]); //récupérer toutes les clés de l'objet state.ideas"
-        console.log(allIdeas);
-        return allIdeas;
-      }
-    }*/
+    }
   },
+  getters: {
+    allIdeas(state) {
+      const allIdeas = Object.keys(state.ideas).map(key => state.ideas[key]); //récupérer toutes les clés de l'objet state.ideas"
+      //console.log(allIdeas);
+      return allIdeas;
+    }
+  },
+
   modules: {}
 });

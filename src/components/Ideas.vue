@@ -9,7 +9,7 @@
 
 <script>
     export default {
-        methods: {
+        computed: {
             allIdeas() {
                 return this.$store.getters.allIdeas;
             }

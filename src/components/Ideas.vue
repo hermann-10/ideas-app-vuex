@@ -1,18 +1,19 @@
 <template>
     <div>
-        <h1>Ideas!</h1>
+        <h1>Ideas</h1>
         <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
+            <li v-for="idea in allIdeas" :key="idea.id">{{ idea.title }}</li> 
         </ul>
     </div>
 </template>
 
 <script>
     export default {
-        
+        methods: {
+            allIdeas() {
+                return this.$store.getters.allIdeas;
+            }
+        },
     }
 </script>
 

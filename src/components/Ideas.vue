@@ -3,7 +3,7 @@
         <h1>Ideas</h1>
         <ul>
             <draggable>
-                <li v-for="idea in allIdeas" :key="idea.id">{{ idea.title }}</li> 
+                <Idea v-for="idea in allIdeas" :key="idea.id" :item="idea" /> 
              </draggable>
         </ul>
     </div>
@@ -11,9 +11,11 @@
 
 <script>
     import draggable from "vuedraggable";
+    import Idea  from '@/components/Idea';
     export default {
         components:{
-            draggable,
+            draggable, 
+            Idea
         },
     
         computed: {

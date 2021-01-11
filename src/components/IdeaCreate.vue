@@ -21,7 +21,8 @@
                     createdAt: new Date(),
                     title: this.title
                 };
-                this.$store.commit('CREATE_IDEAS', idea);
+                //this.$store.commit('CREATE_IDEAS', idea);
+                this.$store.dispatch("createIdea", idea) //Je dispatch l'action createIdea
                 this.title = "" //Après la soumission du formulaire, on reintialise le formulaire à un champ vide
             }
         },

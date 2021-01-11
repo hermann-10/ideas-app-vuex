@@ -15,7 +15,10 @@ export default new Vuex.Store({
     }
   },
   actions: { //on dispatch des actions
-
+    createIdea({ commit }, payload){
+      console.log("actions / createIdea");
+      commit('CREATE_IDEAS', payload);
+    }
   },
   modules: {}
 });

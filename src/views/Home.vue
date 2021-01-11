@@ -7,15 +7,14 @@
 </template>
 
 <script>
-import IdeaCreate from '../components/IdeaCreate.vue';
-import Ideas from '@/components/Ideas';
+import IdeaCreate from "../components/IdeaCreate.vue";
+import Ideas from "@/components/Ideas";
 
 export default {
   name: "Home",
-  components: { 
+  components: {
     Ideas,
-    IdeaCreate 
-  },
- 
+    IdeaCreate
+  }
 };
 </script>

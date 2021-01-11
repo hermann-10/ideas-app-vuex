@@ -7,17 +7,19 @@ export default new Vuex.Store({
   state: {
     ideas: {}
   },
-  mutations: { //on commit des mutations
-    CREATE_IDEAS(state, payload){
+  mutations: {
+    //on commit des mutations
+    CREATE_IDEAS(state, payload) {
       const id = Date.now();
       state.ideas[id] = payload;
-      state.ideas = { ...state.ideas }; 
+      state.ideas = { ...state.ideas };
     }
   },
-  actions: { //on dispatch des actions
-    createIdea({ commit }, payload){
+  actions: {
+    //on dispatch des actions
+    createIdea({ commit }, payload) {
       console.log("actions / createIdea");
-      commit('CREATE_IDEAS', payload);
+      commit("CREATE_IDEAS", payload);
     }
   },
   getters: {

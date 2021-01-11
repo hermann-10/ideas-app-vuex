@@ -17,7 +17,11 @@
         },
         methods: {
             create() {
-                console.log(this.title)
+                const idea = {
+                    createdAt: new Date(),
+                    title: this.title
+                };
+                this.$store.commit('CREATE_IDEAS', idea);
                 this.title = "" //Après la soumission du formulaire, on reintialise le formulaire à un champ vide
             }
         },
